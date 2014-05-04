@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Concept Map</title>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 <div id="container"></div>
@@ -16,16 +16,16 @@ Ludwig Josef Johann Wittgenstein "known for" Language Philosophy
 Ludwig Josef Johann Wittgenstein "notable works" Tractatus Logico-Philosophicus (1921)
 Ludwig Josef Johann Wittgenstein "notable works" Philosophical Investigations (1953)
 
-
 </textarea>
 </body>
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="jquery-ui.min.js"></script>
-<script type="text/javascript" src="jquery.conceptmap.js"></script>
-<script type="text/javascript" src="textareaLoader.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="excanvas.js"></script>
+<script type="text/javascript" src="../lib/html5.js"></script>
+<script type="text/javascript" src="../lib/excanvas.js"></script>
 <![endif]-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-git1.js"></script>
+<script type="text/javascript" src="../lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../lib/jquery.conceptmap.js"></script>
+<script type="text/javascript" src="../lib/textareaLoader.js"></script>
 <script type="text/javascript">
 $(function() {
   $("#container").conceptMap({'tripleLoader': {func: textareaLoadEngine, args: {}}});
