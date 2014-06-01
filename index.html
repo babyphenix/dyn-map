@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Concept Map</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+
 <div id="container"></div>
 <textarea id="concepts" rows="10" cols="60" style="display: none;">
 Ludwig Josef Johann Wittgenstein was a Philosopher
@@ -17,7 +21,6 @@ Ludwig Josef Johann Wittgenstein "notable works" Tractatus Logico-Philosophicus 
 Ludwig Josef Johann Wittgenstein "notable works" Philosophical Investigations (1953)
 
 </textarea>
-
 </body>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="./lib/html5.js"></script>
@@ -25,10 +28,22 @@ Ludwig Josef Johann Wittgenstein "notable works" Philosophical Investigations (1
 <![endif]-->
 <script type="text/javascript" src="http://code.jquery.com/jquery-git1.js"></script>
 <script type="text/javascript" src="./lib/jquery-ui.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./lib/jquery.conceptmap.js"></script>
 <script type="text/javascript" src="./lib/textareaLoader.js"></script>
 <script type="text/javascript">
 $(function() {
+	$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
   $("#container").conceptMap({'tripleLoader': {func: textareaLoadEngine, args: {}}});
 });
 </script>
